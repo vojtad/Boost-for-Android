@@ -352,6 +352,8 @@ echo "Building boost for android"
   } | tee -a $PROGDIR/build.log
 
   # PIPESTATUS variable is defined only in Bash, and we are using /bin/sh, which is not Bash on newer Debian/Ubuntu
+
+  sh $PRODDIR/create-android-makefile.sh "../$BUILD_DIR/lib"
 )
 
 dump "Done!"
