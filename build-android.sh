@@ -356,6 +356,10 @@ echo "Building boost for android"
   sh $PROGDIR/create-android-makefile.sh "../$BUILD_DIR/lib" > ../$BUILD_DIR/lib/boost.mk
 )
 
+echo "$PWD" ""
+echo cp -r $PROGDIR/$BOOST_DIR/boost $PROGDIR/$BUILD_DIR/include/
+cp -r $PROGDIR/$BOOST_DIR/boost $PROGDIR/$BUILD_DIR/include/boost-${BOOST_VER1}_${BOOST_VER2}
+
 dump "Done!"
 
 if [ $PREFIX ]; then
